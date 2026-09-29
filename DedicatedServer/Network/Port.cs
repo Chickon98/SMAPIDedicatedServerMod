@@ -30,7 +30,7 @@ namespace DedicatedServer.Network
                 return;
             }
             monitor.Log($"The server's port has been changed to {config.Port}.", LogLevel.Info);
-
+            ServerPort = config.Port;   // add this
 
             var original = Type
                 .GetType("Lidgren.Network.NetPeerConfiguration, Lidgren.Network")
